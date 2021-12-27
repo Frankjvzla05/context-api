@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Lyrics = () => {
-    return (
-        <div>
-            <p>hello am Lyrics</p>
-        </div>
-    )
-}
+  return <div><p>Hello am Lyrics!!!</p></div>;
+};
 
-export default Lyrics
+export default Lyrics;

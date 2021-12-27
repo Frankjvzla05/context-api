@@ -1,15 +1,14 @@
-import React from "react"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SongsContextProvider from "./contexts/SongsContext";
-import LiricsContextProvider from "./contexts/LyricsContext";
-import './assets/css/styles.css';
+import LyricsContextProvider from "./contexts/LyricsContext";
 import Header from "./components/Common/Header";
 import Songs from "./components/Songs";
 import Lyrics from "./components/Lyrics";
 import NotFound from "./components/NotFound";
+import "./assets/css/styles.css";
 
 const App = () => (
-
   <BrowserRouter>
     <Header />
     <Switch>
@@ -18,16 +17,14 @@ const App = () => (
           <Songs />
         </SongsContextProvider>
       </Route>
-      <Route patch="/lyrics/track/:commontrack_id">
-        <LiricsContextProvider>
-          <Lyrics /> 
-        </LiricsContextProvider>
+      <Route path="/lyrics/track/:commontrack_id">
+        <LyricsContextProvider>
+          <Lyrics />
+        </LyricsContextProvider>
       </Route>
-      <Route component={ NotFound } />
+      <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
 );
-
-
 
 export default App;

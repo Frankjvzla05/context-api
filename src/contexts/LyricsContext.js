@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { createContext, useState, useEffect } from "react";
+import { trackLyricsGet, trackGet } from "./../constants";
 
-const LiricsContextProvider = () => {
-    return (
-        <div>
-            <p>Hello am LiricsContext</p>
-        </div>
-    )
-}
+export const LyricsContext = createContext();
 
-export default  LiricsContextProvider;
+const LyricsContextProvider = () => {
+  
+  
+  
+  return (
+    <div>
+      <p>Hello am Lyrics Context!!!</p>
+    </div>
+  );
+};
+
+export default LyricsContextProvider;

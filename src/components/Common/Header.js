@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
+import { AppBar, Toolbar } from "@material-ui/core";
+import logo from "./../../assets/img/logo.png";
 
-const Header = () => {
+const Header = () => (
+  <AppBar position="sticky">
+    <Toolbar>
+      <img src={logo} alt="logo" width="32" height="32"></img>
+      &nbsp;&nbsp;
+      <h1>Lyric Context App</h1>
+    </Toolbar>
+  </AppBar>
+);
 
-    <AppBar position="sticky">
-        <Tolbar>
-       <img src={logo} alt="logo" width="32" height="32"></img>
-
-        </Tolbar>
-    </AppBar>
-
-
-}
-
-export default Header
+export default Header; 
